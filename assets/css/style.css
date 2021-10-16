@@ -20,7 +20,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #content-desktop {
     display: none;
   }
@@ -1144,6 +1144,37 @@ h6 {
   left: -20px;
   top: 10px !important;
   border-color: transparent black transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+}
+
+.last-child {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
+  position: absolute;
+  top: -10px;
+  left: -180px;
+  background: white;
+  width: max-content;
+  z-index: 99999;
+  max-width: 200px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 12px;
+  list-style: none;
+}
+
+.last-child::after {
+  transition: bottom 0.25s ease-out, opacity 0.01s ease-out 0.01s;
+  opacity: 1;
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  /* bottom: -5em; */
+  left: 158px !important;
+  top: 10px !important;
+  border-color: transparent transparent transparent black;
   border-width: 10px;
   border-style: solid;
 }
